@@ -62,7 +62,7 @@ const FeatureCard = ({ icon, title, content }) => (
 
 
 const Business = () => (
-  <section className="flex flex-col md:flex-row items-center md:items-start py-20 px-8 gap-12 bg-gradient-to-r from-indigo-50 via-white to-cyan-50 rounded-3xl shadow-inner">
+  <section id="about" className="flex flex-col md:flex-row items-center md:items-start py-20 px-8 gap-12 bg-gradient-to-r from-indigo-50 via-white to-cyan-50 rounded-3xl shadow-inner">
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}

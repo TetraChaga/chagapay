@@ -3,7 +3,7 @@ import { feedback } from "../constants";
 import FeedbackCard from "./FeedbackCard";
 
 const Testimonials = () => (
-  <section className="relative py-12 sm:py-20 bg-white">
+  <section id="profile" className="relative py-12 sm:py-20 bg-white">
     <div className="absolute z-0 w-3/5 h-3/5 -right-1/2 rounded-full bg-gradient-to-r from-blue-200 to-blue-400" />
     
     <div className="flex flex-col md:flex-row items-center px-6 sm:px-12">

@@ -24,7 +24,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
 );
 
 const Hero = () => (
-  <div className="min-h-screen  relative ">
+  <div id="home" className="min-h-screen  relative ">
     <motion.div className="py-28 relative z-10">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center px-6 md:px-0">
         <motion.div
