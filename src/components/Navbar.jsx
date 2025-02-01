@@ -62,7 +62,9 @@ const Navbar = () => {
         to="get-started"
         smooth={true}
         duration={500}
-        className="hidden sm:flex bg-indigo-600 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-indigo-700 hover:scale-105 transition-transform cursor-pointer"
+                    className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-4 rounded-full shadow-xl hover:shadow-3xl text-lg font-semibold transition-transform hover:opacity-90"
+
+        // className="hidden sm:flex bg-indigo-600 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-indigo-700 hover:scale-105 transition-transform cursor-pointer"
       >
         Get Started
       </Link>
@@ -99,7 +101,9 @@ const Navbar = () => {
                 to="get-started"
                 smooth={true}
                 duration={500}
-                className="block mt-4 text-center bg-indigo-600 text-white py-2 rounded-lg font-medium shadow-md hover:bg-indigo-700 hover:scale-105 transition-transform cursor-pointer"
+                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-4 rounded-full shadow-xl hover:shadow-3xl text-lg font-semibold transition-transform hover:opacity-90"
+
+                // className="block mt-4 text-center bg-indigo-600 text-white py-2 rounded-lg font-medium shadow-md hover:bg-indigo-700 hover:scale-105 transition-transform cursor-pointer"
               >
                 Get Started
               </Link>
