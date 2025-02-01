@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-12 px-6 sm:px-12 relative">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
         <div className="flex flex-col space-y-4">
-          <img src={logo} alt="logo" className="w-[230px] h-auto object-fill" />
+          <img src={logo} alt="logo" className="w-[230px] h-[40px] object-fill" />
           <p className="text-gray-400 max-w-xs">
             A new way to make payments easy, reliable, and secure.
           </p>

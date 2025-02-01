@@ -19,14 +19,14 @@ const features = [
   },
   {
     id: "feature-3",
-    icon: <Send size={28} className="text-purple-500" />,
+    icon: <Send size={28} className=" text-red-400" />,
     title: "Balance Transfer",
     content:
       "Simplify your finances with hassle-free balance transfers and lower interest rates.",
   },
   {
     id: "feature-4",
-    icon: <CreditCard size={28} className="text-pink-500" />,
+    icon: <CreditCard size={28} className=" text-blue-200" />,
     title: "Easy Transactions",
     content:
       "Experience seamless transactions with a tap, swipe, or click—anytime, anywhere.",
@@ -84,7 +84,7 @@ const Business = () => (
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
-      className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6"
+      className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-9"
     >
       {features.map((feature) => (
         <FeatureCard key={feature.id} {...feature} />
