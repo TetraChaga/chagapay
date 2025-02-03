@@ -5,7 +5,7 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "client/dist"
+        "distDir": "build"
       }
     },
     {
@@ -14,9 +14,41 @@
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/server.js" },
-    { "src": "/(.*)", "dest": "/client/dist/$1" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/client/dist/index.html" }
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/server.js"
+    },
+    {
+      "src": "^/static/(.*)",
+      "dest": "/client/static/$1"
+    },
+    {
+       "src": "/(.*)\\.png",
+       "dest": "/client/$1.png"
+     }, 
+     {
+      "src": "/updateimages",
+      "dest": "/client/"
+    }, 
+     {
+      "src": "/blog",
+      "dest": "/client/"
+    }, 
+    {
+     "src": "/contact",
+     "dest": "/client/"
+    }, 
+    {
+      "src": "/about",
+      "dest": "/client/"
+    }, 
+    {
+       "src": "/(.*)",
+       "dest": "/client/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/client/index.html"
+    }
   ]
 }
