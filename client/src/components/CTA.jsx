@@ -3,14 +3,15 @@ import styles, { layout } from "../styles"
 import Button from "./Button"
 
 const CTA = () => {
-	const navigate = useNavigate();
-
-	const handleContactPage = () => {
-		navigate("/contact");
+	const handleGetStarted = () => {
+		const section = document.getElementById("downloadnow");
+		if (section) {
+		section.scrollIntoView({ behavior: "smooth" });
+		}
 	};
 
 	return (
-		<section id="contact" className={`${layout.section} ${styles.flexCenter}`}>
+		<section className={`${layout.section} ${styles.flexCenter}`}>
 			<div className="bg-black-gradient-2 box-shadow rounded-[20px] p-10 flex-col sm:flex-row flex gap-10">
 				<div className="flex flex-col gap-5 flex-[4]">
 					<h2 className={`${styles.heading2}`}>
@@ -24,9 +25,9 @@ const CTA = () => {
 				<div className="flex items-center justify-center flex-1">
 					<button
 						style={{ minWidth: "152px" }}
-						onClick={handleContactPage}
+						onClick={handleGetStarted}
 						className={`px-6 py-4 text-lg font-medium rounded-[10px] outline-none font-poppins bg-blue-gradient text-primary`}>
-						Contact Us
+						Let's Go
 					</button>
 				</div>
 			</div>

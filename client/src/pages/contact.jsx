@@ -35,7 +35,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+    <div id="contact"  className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
       <div className="max-w-4xl w-full shadow-xl rounded-2xl grid md:grid-cols-2 overflow-hidden">
         <div className="bg-blue-600 text-white p-8 flex flex-col justify-center">
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>

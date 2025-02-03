@@ -12,6 +12,7 @@ import {
 	Hero,
 } from "../components"
 import DownloadNow from "../components/DownloadNow"
+import ContactUs from "./contact"
 
 const App = () => {
 	return (
@@ -31,6 +32,7 @@ const App = () => {
 					<Billing />
 					<DownloadNow />
 					<CardDeal />
+					<ContactUs />
 					<Testimonials />
 					<Clients />
 					<CTA />
