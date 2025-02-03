@@ -297,8 +297,8 @@ app.post("/api/upload-images", upload.array("files"), async (req, res) => {
 
 
 // Start server
-// app.listen(3007, () => {
-//   console.log("Server started on http://localhost:3007");
-// });
+app.listen(3007, () => {
+  console.log("Server started on http://localhost:3007");
+});
 
 module.exports = app;
