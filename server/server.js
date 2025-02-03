@@ -245,6 +245,10 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
 app.post('/api/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
