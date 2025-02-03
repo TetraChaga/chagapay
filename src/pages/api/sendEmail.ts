@@ -46,7 +46,7 @@ export default async function handler(
     });
   } catch (error) {
     res.status(500).json({
-      error: `Error sending email ::: ${error} ${process.env.EMAIL_USER} :::: ${process.env.EMAIL_PASS}`,
+      error: `Error sending email ::: ${error}`,
       name: ""
     });
   }
