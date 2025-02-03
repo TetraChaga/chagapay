@@ -1,4 +1,4 @@
-import styles from "./styles"
+import styles from "../styles"
 import {
 	Navbar,
 	Billing,
@@ -10,7 +10,7 @@ import {
 	Footer,
 	Testimonials,
 	Hero,
-} from "./components"
+} from "../components"
 
 const App = () => {
 	return (
@@ -38,7 +38,6 @@ const App = () => {
 					<Testimonials />
 					<Clients />
 					<CTA />
-					<Footer />
 				</div>
 			</div>
 		</div>
