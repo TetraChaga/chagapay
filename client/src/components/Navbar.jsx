@@ -23,6 +23,14 @@ const menuItemVariants = {
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  
+  const handleGetStarted = () => {
+    const section = document.getElementById("downloadnow");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
   // Detect Scroll Position
   useEffect(() => {
@@ -62,8 +70,8 @@ const Navbar = () => {
         to="get-started"
         smooth={true}
         duration={500}
-                    className="hidden sm:flex bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2 rounded-full shadow-xl hover:shadow-3xl text-lg font-semibold transition-transform hover:opacity-90 cursor-pointer"
-
+        className="hidden sm:flex bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-5 py-2 rounded-full shadow-xl hover:shadow-3xl text-lg font-semibold transition-transform hover:opacity-90 cursor-pointer"
+        onClick={handleGetStarted}
         // className="hidden sm:flex bg-indigo-600 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:bg-indigo-700 hover:scale-105 transition-transform cursor-pointer"
       >
         Get Started
@@ -102,7 +110,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 className="block mt-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-2 rounded-lg shadow-md hover:scale-105 text-lg font-medium transition-transform hover:bg-indigo-700"
-
+                onClick={handleGetStarted}
                 // className="block mt-4 text-center bg-indigo-600 text-white py-2 rounded-lg font-medium shadow-md hover:bg-indigo-700 hover:scale-105 transition-transform cursor-pointer"
               >
                 Get Started

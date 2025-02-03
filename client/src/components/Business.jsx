@@ -61,7 +61,15 @@ const FeatureCard = ({ icon, title, content }) => (
 
 
 
-const Business = () => (
+const Business = () => {
+  const handleGetStarted = () => {
+    const section = document.getElementById("downloadnow");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  
+  return (
   <section id="about" className="flex flex-col md:flex-row items-center md:items-start py-20 px-8 gap-12 bg-gradient-to-r from-indigo-50 via-white to-cyan-50 rounded-3xl shadow-inner">
     <motion.div
       initial={{ opacity: 0, y: -20 }}
@@ -75,9 +83,9 @@ const Business = () => (
       <p className="text-lg text-gray-700 max-w-md mx-auto md:mx-0 mb-6">
         Empower your financial journey with features designed to maximize security, rewards, and ease.
       </p>
-      <Button className="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full shadow-md transition-transform transform hover:scale-105">
+      <button onClick={handleGetStarted} 		className={`px-6 py-4 text-lg font-medium rounded-[10px] outline-none font-poppins bg-blue-gradient text-primary mt-4 bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full shadow-md transition-transform transform hover:scale-105`}>
         Get Started
-      </Button>
+      </button>
     </motion.div>
 
     <motion.div
@@ -91,6 +99,6 @@ const Business = () => (
       ))}
     </motion.div>
   </section>
-);
+)};
 
 export default Business;

@@ -11,16 +11,11 @@ import {
 	Testimonials,
 	Hero,
 } from "../components"
+import DownloadNow from "../components/DownloadNow"
 
 const App = () => {
 	return (
 		<div className="w-full overflow-hidden bg-primary">
-			<div className={`${styles.paddingX} ${styles.flexCenter} relative`}>
-				<div
-					className={`w-full z-50 bg-primary/0 backdrop-blur-xl fixed top-0 sm:px-32 px-12`}>
-					<Navbar />
-				</div>
-			</div>
 
 			<div className={`${styles.flexStart} sm:mt-10 mt-20 bg-primary`}>
 				<div className={`${styles.boxWidth}`}>
@@ -34,6 +29,7 @@ const App = () => {
 					<Stats />
 					<Business />
 					<Billing />
+					<DownloadNow />
 					<CardDeal />
 					<Testimonials />
 					<Clients />

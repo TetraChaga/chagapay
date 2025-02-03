@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import styles, { layout } from "../styles"
 import Button from "./Button"
 
 const CTA = () => {
+	const navigate = useNavigate();
+
+	const handleContactPage = () => {
+		navigate("/contact");
+	};
+
 	return (
 		<section id="contact" className={`${layout.section} ${styles.flexCenter}`}>
 			<div className="bg-black-gradient-2 box-shadow rounded-[20px] p-10 flex-col sm:flex-row flex gap-10">
@@ -15,7 +22,12 @@ const CTA = () => {
 					</p>
 				</div>
 				<div className="flex items-center justify-center flex-1">
-					<Button style="min-w-[152px]" />
+					<button
+						style={{ minWidth: "152px" }}
+						onClick={handleContactPage}
+						className={`px-6 py-4 text-lg font-medium rounded-[10px] outline-none font-poppins bg-blue-gradient text-primary`}>
+						Contact Us
+					</button>
 				</div>
 			</div>
 		</section>

@@ -16,7 +16,7 @@ export default function ContactUs() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("/api/send-email", {
+      const response = await fetch("http://localhost:3007/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

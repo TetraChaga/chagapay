@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ShieldCheck, Lock, KeyRound } from "lucide-react";
 import phone from "../assets/phone.png";
 import { apple, google } from "../assets";
+import { useNavigate } from "react-router-dom";
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <motion.div
@@ -23,7 +24,16 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
   </motion.div>
 );
 
-const Hero = () => (
+const Hero = () => {
+
+  const handleGetStarted = () => {
+    const section = document.getElementById("downloadnow");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
   <div id="home" className="min-h-screen  relative ">
     <motion.div className="py-28 relative z-10">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 items-center px-6 md:px-0">
@@ -46,6 +56,7 @@ const Hero = () => (
           </p>
           <motion.button
             whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(128, 90, 213, 0.7)" }}
+            onClick={handleGetStarted}
             className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-4 rounded-full shadow-xl hover:shadow-3xl text-lg font-semibold transition-transform hover:opacity-90"
           >
             Get Started
@@ -117,6 +128,6 @@ const Hero = () => (
       />
     </div>
   </div>
-);
+)};
 
 export default Hero;
