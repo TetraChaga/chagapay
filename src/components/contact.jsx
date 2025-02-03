@@ -16,7 +16,7 @@ export default function ContactUs() {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("http://localhost:3007/api/send-email", {
+      const response = await fetch("/api/sendEmail", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -43,15 +43,15 @@ export default function ContactUs() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Mail className="w-5 h-5" />
-              <span>contact@example.com</span>
+              <span>contact@chapapay.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="w-5 h-5" />
-              <span>+1 234 567 890</span>
+              <span>+254 700 000 000</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-5 h-5" />
-              <span>123 Main Street, City, Country</span>
+              <span>Nairobi, Kenya</span>
             </div>
           </div>
         </div>

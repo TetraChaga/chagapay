@@ -22,7 +22,7 @@ export default async function handler(
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    host: "smtp.example.com", // Replace with your SMTP provider
+    host: "smtp.gmail.com", // Replace with your SMTP provider
     port: 465, // or 587 for TLS
     secure: true,
     auth: {
@@ -34,7 +34,7 @@ export default async function handler(
   try {
     await transporter.sendMail({
       from: email,
-      to: "your-email@example.com",
+      to: "brendenozie@gmail.com",
       subject: `New Contact Form Submission from ${name}`,
       text: message,
     });
@@ -46,7 +46,7 @@ export default async function handler(
     });
   } catch (error) {
     res.status(500).json({
-      error: "Error sending email",
+      error: `Error sending email ::: ${error} ${process.env.EMAIL_USER} :::: ${process.env.EMAIL_PASS}`,
       name: ""
     });
   }
